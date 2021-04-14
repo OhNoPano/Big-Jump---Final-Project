@@ -4,11 +4,6 @@ using UnityEngine;
 
 public class MovingPlatform : MonoBehaviour
 {
-    
-    public float speed = 5;
-    public float distance = 50;
-    public float travelTime = 10;
-    
     Vector3 pointA = new Vector3(0, 0, 0);
     Vector3 pointB = new Vector3(5, 0, 0);
     
