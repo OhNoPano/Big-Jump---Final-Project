@@ -1,11 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class MovingPlatform : MonoBehaviour
 {
-    Vector3 pointA = new Vector3(0, 0, 0);
-    Vector3 pointB = new Vector3(5, 0, 0);
+    public Vector3 pointA = new Vector3(0, 0, 0);
+    public Vector3 pointB = new Vector3(5, 0, 0);
+    public float speedDivider = 2;
     
 
     // Start is called before the first frame update
@@ -17,7 +16,7 @@ public class MovingPlatform : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-         transform.position = Vector3.Lerp(pointA, pointB, Mathf.PingPong(Time.time / 2, 1));
+         transform.position = Vector3.Lerp(pointA, pointB, Mathf.PingPong(Time.time / speedDivider, 1));
     }
 
 }
