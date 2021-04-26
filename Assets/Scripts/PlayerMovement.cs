@@ -47,4 +47,5 @@ public class PlayerMovement : MonoBehaviour {
             gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, bigJump), ForceMode2D.Impulse);
         }
     }
+
 }
