@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour {
 
@@ -45,6 +46,12 @@ public class PlayerMovement : MonoBehaviour {
     public void jumpClick(){
         if (isGrounded == true){
             gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, bigJump), ForceMode2D.Impulse);
+        }
+    }
+    private void OnCollisionEnter2D(Collision2D hit){
+        if(hit.gameObject.tag == "KILLZONE"){
+            Scene CS = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(CS.name);
         }
     }
 
