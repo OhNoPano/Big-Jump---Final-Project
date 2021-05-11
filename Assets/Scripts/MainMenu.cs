@@ -13,4 +13,8 @@ public class MainMenu : MonoBehaviour
         Debug.Log("u quit lmao");
         Application.Quit();
     }
+
+    public void muteAudio () {
+        AudioListener.volume = 0;    
+    }
 }
