@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+
     public void PlayGame () {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
@@ -15,6 +16,10 @@ public class MainMenu : MonoBehaviour
     }
 
     public void muteAudio () {
-        AudioListener.volume = 0;    
+        AudioListener.volume = 0f;    
+    }
+
+    public void unmuteAudio () {
+        AudioListener.volume = 1f;
     }
 }
