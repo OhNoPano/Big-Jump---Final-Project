@@ -13,6 +13,11 @@ public class NextLevel : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
+        else if (col.gameObject.name == "Player" && whichScene == 2)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+        
         else{
             SceneManager.LoadScene(0);
         }
