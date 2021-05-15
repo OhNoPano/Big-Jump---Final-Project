@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour {
 
-    public float moveSpeed = 10f;
-    public float bigJump = 10f;
+    public float moveSpeed = 15f;
+    public float bigJump = 20f;
     public bool isGrounded = false;
 
     private bool Left = false;
