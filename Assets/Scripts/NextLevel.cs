@@ -5,23 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class NextLevel : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public int whichScene;
 
     void OnCollisionEnter2D (Collision2D col)
     {
-        if (col.gameObject.name == "Player")
+        if (col.gameObject.name == "Player" && whichScene == 1)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+        else{
+            SceneManager.LoadScene(0);
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        whichScene = SceneManager.GetActiveScene().buildIndex;
     }
 }

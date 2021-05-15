@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        Jump();
+        //Jump();
         Vector3 horizontalMove = new Vector3(Input.GetAxis("Horizontal"), 0f, 0f);
         transform.position += horizontalMove * Time.deltaTime * moveSpeed;
         if(Left == true){
